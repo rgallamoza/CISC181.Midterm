@@ -128,94 +128,187 @@ public class Student_Test {
 			}
 		}
 		
+		double TotalGP = 0;
+		for(Section s : SectionList){
+			if(s.getCourseID()==C1.getCourseID()){
+				TotalGP+=C1.getGradePoints();
+			}
+			else if(s.getCourseID()==C2.getCourseID()){
+				TotalGP+=C2.getGradePoints();
+			}
+			else{
+				TotalGP+=C3.getGradePoints();
+			}
+		}
+
 		double S1Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S1.getStudentID()){
-				S1Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S1Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S1Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S1Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S1Avg /= 6;
+		S1Avg /= TotalGP;
 		assertEquals(S1Avg,4,0.001);
-		
+
 		double S2Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S2.getStudentID()){
-				S2Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S2Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S2Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S2Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S2Avg /= 6;
+		S2Avg /= TotalGP;
 		assertEquals(S2Avg,4,0.001);
 		
 		double S3Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S3.getStudentID()){
-				S3Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S3Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S3Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S3Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S3Avg /= 6;
+		S3Avg /= TotalGP;
 		assertEquals(S3Avg,3.5,0.001);
 		
 		double S4Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S4.getStudentID()){
-				S4Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S4Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S4Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S4Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S4Avg /= 6;
+		S4Avg /= TotalGP;
 		assertEquals(S4Avg,3.5,0.001);
 		
 		double S5Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S5.getStudentID()){
-				S5Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S5Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S5Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S5Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S5Avg /= 6;
+		S5Avg /= TotalGP;
 		assertEquals(S5Avg,3,0.001);
 		
 		double S6Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S6.getStudentID()){
-				S6Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S6Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S6Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S6Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S6Avg /= 6;
+		S6Avg /= TotalGP;
 		assertEquals(S6Avg,3,0.001);
 		
 		double S7Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S7.getStudentID()){
-				S7Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S7Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S7Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S7Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S7Avg /= 6;
+		S7Avg /= TotalGP;
 		assertEquals(S7Avg,2.5,0.001);
 		
 		double S8Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S8.getStudentID()){
-				S8Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S8Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S8Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S8Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S8Avg /= 6;
+		S8Avg /= TotalGP;
 		assertEquals(S8Avg,2.5,0.001);
 		
 		double S9Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S9.getStudentID()){
-				S9Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S9Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S9Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S9Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S9Avg /= 6;
+		S9Avg /= TotalGP;
 		assertEquals(S9Avg,2,0.001);
 		
 		double S10Avg = 0;
 		for(Enrollment enrollment : EnrollmentList){
 			if(enrollment.getStudentID()==S10.getStudentID()){
-				S10Avg += enrollment.getGrade();
+				if(enrollment.getSectionID()==CompSci1.getSectionID() || enrollment.getSectionID()==CompSci2.getSectionID()){
+					S10Avg += enrollment.getGrade()*C1.getGradePoints();
+				}
+				else if(enrollment.getSectionID()==Calc1.getSectionID() || enrollment.getSectionID()==Calc2.getSectionID()){
+					S10Avg += enrollment.getGrade()*C2.getGradePoints();
+				}
+				else{
+					S10Avg += enrollment.getGrade()*C3.getGradePoints();
+				}
 			}
 		}
-		S10Avg /= 6;
+		S10Avg /= TotalGP;
 		assertEquals(S10Avg,2,0.001);
 	}
 	
